@@ -1,0 +1,12 @@
+* source PRACTICA 1-2
+L_Lr         N14860 N14698  1mH  
+R_Rr         N14698 N15386  10m TC=0,0 
+R_Rcarga         0 OUT+  {carga} TC=0,0 
+C_Cf         0 OUT+  1mF  TC=0,0 
+V_V1         N14860 N15258  
++SIN 0 311 50Hz 0 0 0
+D_D1         0 N15386 Dbreak 
+D_D2         0 N15258 Dbreak 
+D_D3         N15258 OUT+ Dbreak 
+D_D4         N15386 OUT+ Dbreak 
+.PARAM  carga=10
