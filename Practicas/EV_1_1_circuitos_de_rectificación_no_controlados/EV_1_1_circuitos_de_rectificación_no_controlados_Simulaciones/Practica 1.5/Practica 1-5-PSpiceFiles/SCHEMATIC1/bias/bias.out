@@ -1,0 +1,112 @@
+
+**** 09/13/19 10:53:27 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\Alondra González\Desktop\Practica 1\Practica 1.5\practica 1-5-pspicefiles\schematic1\bias.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN 50u 60ms 0 50u 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PRACTICA 1-5
+D_D1         N14673 N14735 Dbreak 
+D_D2         N14673 N14739 Dbreak 
+D_D3         N14739 N14706 Dbreak 
+D_D4         N14735 N14706 Dbreak 
+C_Cf         N14706 N14673 1mF
+R_Rcarga         N14673 N14706  10 TC=0,0 
+L_Lr         N15577 N14735  1mH  
+V_V1         N15577 N14739  
++SIN 0 311 60 0 0 0
+R_R1         N14673 0 10M
+
+**** RESUMING bias.cir ****
+.END
+
+**** 09/13/19 10:53:27 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\Alondra González\Desktop\Practica 1\Practica 1.5\practica 1-5-pspicefiles\schematic1\bias.
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 09/13/19 10:53:27 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\Alondra González\Desktop\Practica 1\Practica 1.5\practica 1-5-pspicefiles\schematic1\bias.
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14673)    0.0000 (N14706)    0.0000 (N14735) 48.28E-24 (N14739) 48.28E-24     
+
+(N15577) 48.28E-24 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/13/19 10:53:27 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\Alondra González\Desktop\Practica 1\Practica 1.5\practica 1-5-pspicefiles\schematic1\bias.
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .23
+

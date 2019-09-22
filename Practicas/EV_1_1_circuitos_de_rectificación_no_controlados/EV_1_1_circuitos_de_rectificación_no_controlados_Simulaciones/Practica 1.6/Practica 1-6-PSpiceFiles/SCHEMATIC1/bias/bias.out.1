@@ -1,0 +1,63 @@
+
+**** 09/11/19 22:53:02 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\uriel\Desktop\Practica 1\Practica 1.6\practica 1-6-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN 50u 40m 0 50u SKIPBP 
+.FOUR 50 20 i(Lr1) 
+.STEP PARAM Lred LIST -24A,0A,24A 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PRACTICA 1-6
+V_V1         L1 N14422  
++SIN 0 311 50Hz 0 0 0
+V_V2         L2 N14422  
++SIN 0 311 50Hz 0 0 0
+V_V3         L3 N14422  
++SIN 0 311 50Hz 0 0 0
+L_L1         L1 N14614  {Lred}  
+L_L2         L2 N14618  {Lred}  
+L_L3         L3 N14622  {Lred}  
+R_Rr1         N14614 N14775  1m TC=0,0 
+R_Rr2         N14618 N14779  1m TC=0,0 
+R_Rr3         N14622 N14783  1m TC=0,0 
+D_D1         N14775 OUT Dbreak 
+D_D2         N14779 OUT Dbreak 
+D_D3         N14783 OUT Dbreak 
+D_D4         0 N14775 Dbreak 
+D_D5         0 N14779 Dbreak 
+D_D6         0 N14783 Dbreak 
+R_RESR         N14913 OUT  20m TC=0,0 
+C_Cf         N14913 0 {Cap}
+R_Rcarga         0 OUT  {carga} TC=0,0 
+.PARAM  lred=1mh carga=20 cap=1mf
+
+**** RESUMING bias.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): FOUR device Lr1 is undefined
+

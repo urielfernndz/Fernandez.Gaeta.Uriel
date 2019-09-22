@@ -1,0 +1,7 @@
+* source PRACTICA1-7
+V_Vred         N14426 0  
++SIN 0 311 50Hz 0 0 0
+L_Lr         N14426 N14433  4mH  
+D_D1         N14433 OUT Dbreak 
+D_D2         0 OUT Dbreak 
+I_Io         OUT 0 DC 100A  

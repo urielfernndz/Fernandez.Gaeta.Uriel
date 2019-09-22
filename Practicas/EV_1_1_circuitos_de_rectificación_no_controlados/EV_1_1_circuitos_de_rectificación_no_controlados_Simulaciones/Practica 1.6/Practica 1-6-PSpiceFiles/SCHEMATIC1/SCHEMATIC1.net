@@ -1,0 +1,23 @@
+* source PRACTICA 1-6
+V_V1         L1 N14422  
++SIN 0 380 50Hz 0 0 0
+V_V2         L2 N14422  
++SIN 0 380 50Hz 0 0 0
+V_V3         L3 N14422  
++SIN 0 380 50Hz 0 0 0
+L_Lr1         L1 N14614  {Lred} IC=0A 
+L_Lr2         L2 N14618  {Lred} IC=-24 
+L_Lr3         L3 N14622  {Lred} IC=24A 
+R_Rr1         N14614 N14775  1m TC=0,0 
+R_Rr2         N14618 N14779  1m TC=0,0 
+R_Rr3         N14622 N14783  1m TC=0,0 
+D_D1         N14775 OUT Dbreak 
+D_D2         N14779 OUT Dbreak 
+D_D3         N14783 OUT Dbreak 
+D_D4         0 N14775 Dbreak 
+D_D5         0 N14779 Dbreak 
+D_D6         0 N14783 Dbreak 
+R_RESR         N14913 OUT  20m TC=0,0 
+C_Cf         N14913 0 {Cap}
+R_Rcarga         0 OUT  {carga} TC=0,0 
+.PARAM  lred=1mh carga=20 cap=1mf

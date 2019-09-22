@@ -1,0 +1,8 @@
+.ALIASES
+V_Vred          Vred(+=N14426 -=0 ) CN @PRACTICA1-7.SCHEMATIC1(sch_1):INS14307@SOURCE.VSIN.Normal(chips)
+L_Lr            Lr(1=N14426 2=N14433 ) CN @PRACTICA1-7.SCHEMATIC1(sch_1):INS14344@ANALOG.L.Normal(chips)
+D_D1            D1(1=N14433 2=OUT ) CN @PRACTICA1-7.SCHEMATIC1(sch_1):INS14369@BREAKOUT.Dbreak.Normal(chips)
+D_D2            D2(1=0 2=OUT ) CN @PRACTICA1-7.SCHEMATIC1(sch_1):INS14385@BREAKOUT.Dbreak.Normal(chips)
+I_Io            Io(+=OUT -=0 ) CN @PRACTICA1-7.SCHEMATIC1(sch_1):INS14410@SOURCE.IDC.Normal(chips)
+_    _(out=OUT)
+.ENDALIASES

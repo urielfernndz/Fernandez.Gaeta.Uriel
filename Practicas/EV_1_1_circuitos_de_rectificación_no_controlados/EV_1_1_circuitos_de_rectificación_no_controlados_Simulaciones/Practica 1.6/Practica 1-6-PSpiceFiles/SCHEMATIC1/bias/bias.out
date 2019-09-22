@@ -1,0 +1,140 @@
+
+**** 09/11/19 23:11:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\uriel\Desktop\Practica 1\Practica 1.6\practica 1-6-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN 50u 1000M 0 50u SKIPBP 
+.FOUR 50 20 i(L_Lr1) 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PRACTICA 1-6
+V_V1         L1 N14422  
++SIN 0 380 50Hz 0 0 0
+V_V2         L2 N14422  
++SIN 0 380 50Hz 0 0 0
+V_V3         L3 N14422  
++SIN 0 380 50Hz 0 0 0
+L_Lr1         L1 N14614  {Lred} IC=0A 
+L_Lr2         L2 N14618  {Lred} IC=-24 
+L_Lr3         L3 N14622  {Lred} IC=24A 
+R_Rr1         N14614 N14775  1m TC=0,0 
+R_Rr2         N14618 N14779  1m TC=0,0 
+R_Rr3         N14622 N14783  1m TC=0,0 
+D_D1         N14775 OUT Dbreak 
+D_D2         N14779 OUT Dbreak 
+D_D3         N14783 OUT Dbreak 
+D_D4         0 N14775 Dbreak 
+D_D5         0 N14779 Dbreak 
+D_D6         0 N14783 Dbreak 
+R_RESR         N14913 OUT  20m TC=0,0 
+C_Cf         N14913 0 {Cap}
+R_Rcarga         0 OUT  {carga} TC=0,0 
+.PARAM  lred=1mh carga=20 cap=1mf
+
+**** RESUMING bias.cir ****
+.END
+
+**** 09/11/19 23:11:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\uriel\Desktop\Practica 1\Practica 1.6\practica 1-6-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 09/11/19 23:11:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\uriel\Desktop\Practica 1\Practica 1.6\practica 1-6-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE I(L_Lr1)
+
+
+
+ DC COMPONENT =   2.879027E-12
+
+ HARMONIC   FREQUENCY    FOURIER    NORMALIZED    PHASE        NORMALIZED
+    NO         (HZ)     COMPONENT    COMPONENT    (DEG)       PHASE (DEG)
+
+     1     5.000E+01    2.503E-16    1.000E+00    1.325E+00    0.000E+00
+     2     1.000E+02    1.510E-16    6.034E-01    1.034E+02    1.008E+02
+     3     1.500E+02    4.904E-17    1.960E-01   -1.374E+01   -1.772E+01
+     4     2.000E+02    1.170E-16    4.673E-01   -7.095E+01   -7.625E+01
+     5     2.500E+02    2.745E-17    1.097E-01   -3.642E+01   -4.305E+01
+     6     3.000E+02    7.503E-17    2.998E-01    1.480E+02    1.400E+02
+     7     3.500E+02    5.602E-17    2.239E-01    5.628E+01    4.700E+01
+     8     4.000E+02    9.669E-17    3.864E-01   -1.067E+01   -2.128E+01
+     9     4.500E+02    1.069E-16    4.273E-01    1.742E+02    1.623E+02
+    10     5.000E+02    1.269E-16    5.070E-01    1.228E+02    1.096E+02
+    11     5.500E+02    6.011E-17    2.402E-01   -2.727E+01   -4.185E+01
+    12     6.000E+02    8.255E-17    3.299E-01   -1.019E+02   -1.178E+02
+    13     6.500E+02    3.260E-17    1.303E-01   -7.810E+01   -9.533E+01
+    14     7.000E+02    5.770E-17    2.306E-01    4.601E+00   -1.396E+01
+    15     7.500E+02    6.609E-17    2.641E-01    1.162E+02    9.628E+01
+    16     8.000E+02    1.048E-16    4.189E-01    1.160E+02    9.482E+01
+    17     8.500E+02    1.657E-17    6.620E-02   -8.121E+01   -1.037E+02
+    18     9.000E+02    1.167E-16    4.662E-01   -7.814E+01   -1.020E+02
+    19     9.500E+02    3.629E-17    1.450E-01   -1.341E+02   -1.593E+02
+    20     1.000E+03    1.830E-17    7.313E-02    8.306E+01    5.655E+01
+
+
+     TOTAL HARMONIC DISTORTION =   1.446322E+02 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 09/11/19 23:11:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\uriel\Desktop\Practica 1\Practica 1.6\practica 1-6-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        3.08
+
